@@ -14,7 +14,9 @@ def final_decision():
         answer = input('Do you ask a question? ')
         if answer in yes_answers:
             question = input('''What is your question? ''')
-            if question.lower() in closed_question_prompts:
+            question = question.lower()
+            question = question.split()
+            if question[0] in closed_question_prompts:
                 print(random.choice(yes_no))
             else:
                 print('You messed up!')
@@ -27,7 +29,6 @@ def final_decision():
                     decision_count += 1
                     return
                 else:
-                    # print('OPEN THE BOX AND I WILL RELEASE YOU')
                     continue
         elif answer in no_answers:
             print('''There may be no other way out.''')
@@ -111,35 +112,8 @@ def decision_2():
             decision_3_b()
             decision_count += 1
 
+def start_game():
+    decision_1()
+    decision_2()
 
-# def decision_4():
-#     yes_no = ['YES', 'NO', '0 < P < 1']
-#     closed_question_prompts = ['am', 'is', 'was', 'were', 'will', 'would', '''won't''', '''wouldn't''', 'are', 'can', 'could', '''couldn't''', 'shall', '''shan't''', '''shant''', '''shouldn't''', 'do', 'does', 'did', '''don't''', 'dont', '''doesn't''', '''can't''', 'have', 'had', '''haven't''', '''hasn't''', 'may', 'might', '''mightn't''']
-#     print('''The elevator descends. When it stops, it opens on a dim chamber. In the middle of the chamber, something the size and color of an old-school copy machine is spotlighted from above. When you approach the thing, you see the analog keyboard and digital display with its blinking cursor, and the all-caps label that says CLOSED QUESTIONS ONLY.''')
-#     decision_count = 0
-#     while decision_count == 0:
-#         answer = input('Do you ask a question? ')
-#         if answer in yes_answers:
-#             question = input('''What is your question? ''')
-#             question = question.lower()
-#             if question in closed_question_prompts:
-#                 print(random.choice(yes_no))
-#             else:
-#                 print('You messed up!')
-#                 print('OPEN THE BOX AND I WILL RELEASE YOU')
-#                 answer = input('Do you open the box? ')
-#                 if answer in yes_answers:
-#                     print('You type HOW DO I OPEN THE BOX?')
-#                     print('The display says YOU JUST DID.')
-#                     print('THE END')
-#                     decision_count += 1
-#                     return
-#                 else:
-#                     print('OPEN THE BOX AND I WILL RELEASE YOU')
-#         elif answer in no_answers:
-#             print('''There may be no other way out.''')
-#         else:
-#             print('Try again.')
-
-decision_1()
-decision_2()
+start_game()
