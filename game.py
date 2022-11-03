@@ -1,5 +1,8 @@
 import random
+import art
+from art import *
 
+title = text2art('GRADIENT DESCENT')
 yes_answers = ['y', 'Y', 'yes', 'Yes', 'YES', 'ok', 'OK', 'Ok', 'okay', 'Okay', 'OKAY', 'yeah', 'Yeah', 'YEAH', 'sure', 'Sure', 'SURE']
 no_answers = ['n', 'N', 'no', 'No', 'NO', 'no way', 'No way', 'Hell no', 'hell no', 'nope', 'Nope', 'NOPE']
 left_elevator_answers = ['left', 'Left', 'L', 'l', 'on the left', 'the left', 'one on the left', 'the one on the left', 'left elevator', 'Left elevator', 'Left Elevator', 'the left elevator', 'elevator on the left', 'the elevator on the left', 'The elevator on the left']
@@ -40,7 +43,8 @@ def decision_1():
     while decision_count == 0:
         answer = input('''The doors of an AI research lab hang askance. Do you enter? ''')
         if answer in yes_answers:
-            print('''You enter the AI lab... It's the elevator lobby. But this is the ground level--''')
+            print('''You've found the elevator lobby.''')
+            print('Is that...an earthquake?')
             print('The ceiling caves in behind you!')
             print('''You'll have to find another way out.''')
             decision_count += 1
@@ -113,6 +117,7 @@ def decision_2():
             decision_count += 1
 
 def start_game():
+    print(title)
     decision_1()
     decision_2()
 
