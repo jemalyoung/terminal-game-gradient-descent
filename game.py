@@ -1,6 +1,7 @@
 import random
 import art
 from art import *
+import time
 
 title = text2art('GRADIENT DESCENT')
 yes_answers = ['y', 'Y', 'yes', 'Yes', 'YES', 'ok', 'OK', 'Ok', 'okay', 'Okay', 'OKAY', 'yeah', 'Yeah', 'YEAH', 'sure', 'Sure', 'SURE']
@@ -44,41 +45,70 @@ def decision_1():
         answer = input('''The doors of an AI research lab hang askance. Do you enter? ''')
         if answer in yes_answers:
             print('''You've found the elevator lobby.''')
+            time.sleep(1)
             print('Is that...an earthquake?')
+            time.sleep(1.5)
             print('The ceiling caves in behind you!')
+            time.sleep(1)
             print('''You'll have to find another way out.''')
             decision_count += 1
         else:
             print('Try again.')
 
-
+time.sleep(1.25)
 def decision_2():
     print('''There are two elevators in the lobby. You press the button...''')
+    time.sleep(1)
     print('Both doors open.')
+    time.sleep(1)
     decision_count = 0
     while decision_count == 0:
-        answer = input('Which elevator do you enter? The one on the left, or the one on the right? ')
+        print('Which elevator do you enter?')
+        time.sleep(1)
+        answer = input('The one on the left, or the one on the right? ')
 # LEFT BRANCH
         if answer in left_elevator_answers:
+            time.sleep(1)
             print('You enter the elevator on the left. There are no buttons. The door closes.')
             def decision_3_a():
+                time.sleep(1)
                 print('''The elevator deposits you in a dim passageway. There's an open door ahead. You approach the door and look inside...''')
-                print('A man with his back to you in a white lab coat, busy at a whiteboard.')
-                print('''"You're just in time to test my novel decision theory," he says without turning, and your gorge rises at the sight of the algebraic blasphemies and grotesque decision matrices on the whiteboard. "Won't you come in?"''')
+                time.sleep(1)
+                print('A man in a white lab coat working at a whiteboard. His dry-erase marker squeaks and squeals.')
+                time.sleep(1)
+                print('''"Come in and I'll show you the way out," he says, still facing the algebraic blasphemies and grotesque decision matrices on the whiteboard. "Would you like me to show you?"''')
+                time.sleep(1)
                 decision_count = 0
                 while decision_count == 0:
                     answer = input('Do you enter the room? ')
+                    time.sleep(1)
                     if answer in yes_answers:
-                        print('''You enter the room. "I propose Bottomless Decision Theory," the man says as he jumps on you.''')
+                        print('''You enter the room. The man is gone.''')
+                        time.sleep(1.5)
+                        print('''"I've shown you the way out," he says from the hallway behind you, and then he's gone. You run through the door, white coattails flying...''')
+                        time.sleep(1)
+                        print('''"WTF..."''')
+                        time.sleep(1)
+                        print('''You're back in the room with the whiteboard.''')
+                        time.sleep(1)
+                        print('You try to get out again.')
+                        time.sleep(1)
+                        print('And again.')
+                        time.sleep(1)
+                        print('And again.')
+                        time.sleep(0.5)
+                        print('And again.')
+                        time.sleep(0.5)
+                        print('AND AGAIN.')
+                        time.sleep(0.5)
+                        print('AND AGAIN.')
+                        time.sleep(1)
                         print('THE END')
                         decision_count += 1
                     elif answer in no_answers:
                         print('''You back away. "Maybe next time."''')
                         print('''Now the man is facing you. "Maybe next time," he says, "or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or..."''')
-                        print('You run.')
-                        print('So does the man in the white coat.')
-                        print('''"Or the time after that. Or the time after that. Or the time after that. Or the time..."''')
-                        print('You make it to the elevator. The door slides shut.')
+                        print('You run back to the elevator. The door slides shut.')
                         final_decision()
                         decision_count += 1
                     else:
