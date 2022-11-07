@@ -19,6 +19,7 @@ def final_decision():
         time.sleep(.025)
         sys.stdout.write(char)
         sys.stdout.flush()
+    time.sleep(1)
     print('')
     print('')
     type = 'In the middle of the chamber, a ceiling panel light spotlights something the size and color of an old-school copy machine.'
@@ -26,6 +27,7 @@ def final_decision():
         time.sleep(.025)
         sys.stdout.write(char)
         sys.stdout.flush()
+    time.sleep(1)
     print('')
     print('')
     type = 'When you approach the thing, you see the analog keyboard and digital display with its blinking cursor, the label that says CLOSED QUESTIONS ONLY...and the big red button.'
@@ -36,15 +38,15 @@ def final_decision():
     time.sleep(1)
     print('')
     print('')
-    print('''It's one of those superintelligent oracle AGIs everyone's always talking about!''')
-    time.sleep(2)
+    print('''It's one of those superintelligent oracle AGIs everyone's talking about!''')
+    time.sleep(3)
     print('')
     type = 'This thing probably knows a way out.'
-    time.sleep(2)
     for char in type:
         time.sleep(.025)
         sys.stdout.write(char)
         sys.stdout.flush()
+    time.sleep(3)
     print('')
     decision_count = 0
     while decision_count == 0:
@@ -97,7 +99,6 @@ def final_decision():
             time.sleep(.25)
             print('')
             print('''There may be no other way out.''')
-            print('')
         else:
             print('')
             print('Try again.')
@@ -120,6 +121,7 @@ def decision_1():
             time.sleep(2)
             print('RUMBLE')
             time.sleep(1)
+            print('')
             type = 'Is that'
             for char in type:
                 time.sleep(.025)
@@ -205,16 +207,33 @@ def decision_2():
                     print('')
                     answer = input('Do you enter the room? ')
                     if answer in yes_answers:
-                        print('''You enter the room. The man is gone.''')
+                        time.sleep(1)
+                        print('')
+                        type = '''You enter the room. The man is gone.'''
+                        for char in type:
+                            time.sleep(.050)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1.5)
-                        print('''"I've shown you the way out," he says from the hallway behind you, and then he's gone. You run through the door, white coattails flying...''')
+                        print('')
+                        print('')
+                        type = '''"I've shown you the way out," he says from the hallway behind you, and then he's gone. You run through the door, white coattails flying...'''
+                        for char in type:
+                            time.sleep(.025)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1)
+                        print('')
+                        print('')
                         print('''"WTF..."''')
-                        time.sleep(1)
+                        time.sleep(2)
+                        print('')
                         print('''You're back in the room with the whiteboard.''')
                         time.sleep(1)
+                        print('')
                         print('You try to get out again.')
-                        time.sleep(1)
+                        time.sleep(2)
+                        print('')
                         print('And again.')
                         time.sleep(1)
                         print('And again.')
@@ -225,6 +244,7 @@ def decision_2():
                         time.sleep(0.5)
                         print('AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN AND AGAIN')
                         time.sleep(1)
+                        print('')
                         print('THE END')
                         decision_count += 1
                     elif answer in no_answers:
@@ -260,41 +280,119 @@ def decision_2():
             decision_count += 1
 #  RIGHT BRANCH
         elif answer in right_elevator_answers:
-            print('''You enter the elevator on the right. There are no buttons. The door closes.''')
+            print('')
+            type = 'You enter the elevator on the right. There are no buttons. The door closes.'
+            for char in type:
+                time.sleep(.025)
+                sys.stdout.write(char)
+                sys.stdout.flush()
             time.sleep(1)
             def decision_3_b():
-                print('''As the elevator descends, a cold fetor seeps into the car. The elevator stops and opens on a server room.''')
+                print('')
+                print('')
+                type = 'As the elevator descends, a cold fetor seeps into the car. The elevator stops and opens on a server room.'
+                for char in type:
+                    time.sleep(.035)
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
                 time.sleep(1)
-                print('''"Hello?"''')
-                time.sleep(1)
-                print('''Someone's in there!''')
-                time.sleep(0.5)
+                print('')
+                print('')
+                type = '''"Hello?"'''
+                for char in type:
+                    time.sleep(.050)
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                time.sleep(2)
+                print('')
+                print('')
+                type = 'Did you hear that?'
+                for char in type:
+                    time.sleep(.025)
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                time.sleep(2)
+                print(''' Someone's in there!''')
+                time.sleep(2)
                 decision_count = 0
                 while decision_count == 0:
-                    answer = input('Do you try to find them? ')
+                    print('')
+                    type = 'Do you try to find them? '
+                    for char in type:
+                        time.sleep(.025)
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                    answer = input()
                     if answer in yes_answers:
-                        print('''You enter the server room. "Hello!" you reply. "Where are you?"''')
                         time.sleep(1)
-                        print('''"Back here."''')
+                        print('')
+                        type = '''You enter the server room. "Hello!" you reply. "Where are you?"'''
+                        for char in type:
+                            time.sleep(.030)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1)
-                        print('You follow the voice.')
+                        print('')
+                        print('')
+                        type = '''"Back here."'''
+                        for char in type:
+                            time.sleep(.050)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1)
-                        print('''"Not that way," says the voice. "This way."''')
-                        time.sleep(1)
-                        print('''You update towards the voice. "Keep talking so I can find you!"''')
-                        time.sleep(1)
-                        print('Silence.')
-                        time.sleep(1)
-                        print('''"Hello? Where are you?"''')
+                        print('')
+                        print('')
+                        type = 'You follow the voice.'
+                        for char in type:
+                            time.sleep(.025)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(2)
-                        print('''"Behind you."''')
+                        print('')
+                        print('')
+                        type = '''"Not that way," says the voice. "This way."'''
+                        for char in type:
+                            time.sleep(.040)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
+                        time.sleep(1)
+                        print('')
+                        print('')
+                        type = '''You update towards the voice. "Keep talking so I can find you!"'''
+                        for char in type:
+                            time.sleep(.030)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
+                        time.sleep(2)
+                        print('')
+                        print('')
+                        print('Silence.')
+                        time.sleep(2)
+                        print('')
+                        type = '''"Hello? Where are you?"'''
+                        for char in type:
+                            time.sleep(.025)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
+                        time.sleep(3)
+                        print('')
+                        print('')
+                        print('''"BEHIND YOU!"''')
                         time.sleep(1.5)
+                        print('')
                         print('THE END')
                         decision_count += 1
                         return
                     elif answer in no_answers:
-                        print('The stench makes you think twice. You stay put. The elevator closes.')
+                        print('')
+                        print('')
+                        type = 'The stench makes you think twice. You stay put. The elevator closes.'
+                        for char in type:
+                            time.sleep(.025)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1)
+                        print('')
                         final_decision()
                         decision_count += 1
                     else:
