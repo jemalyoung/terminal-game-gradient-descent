@@ -154,7 +154,6 @@ def decision_1():
             print('')
             time.sleep(1)
 
-
 def decision_2():
     print('')
     type = '''In the lobby there are two elevators and one button. You press the button... '''
