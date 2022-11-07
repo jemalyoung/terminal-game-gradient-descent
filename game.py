@@ -13,30 +13,81 @@ right_elevator_answers = ['right', 'Right', 'R', 'r', 'on the right', 'the right
 def final_decision():
     yes_no = ['YES', 'NO', '0 < P < 1']
     closed_question_prompts = ['am', 'is', 'was', 'were', 'will', 'would', '''won't''', '''wouldn't''', 'are', 'can', 'could', '''couldn't''', 'shall', '''shan't''', '''shant''', '''shouldn't''', 'do', 'does', 'did', '''don't''', 'dont', '''doesn't''', '''can't''', 'have', 'had', '''haven't''', '''hasn't''', 'may', 'might', '''mightn't''']
-    print('''The elevator descends. When it stops, it opens on a dim chamber. In the middle of the chamber, something the size and color of an old-school copy machine is spotlighted from above. When you approach the thing, you see the analog keyboard and digital display with its blinking cursor, and the all-caps label that says CLOSED QUESTIONS ONLY.''')
+    print('')
+    type = 'The elevator descends. When it stops, it opens on a dim chamber.'
+    for char in type:
+        time.sleep(.025)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+    print('')
+    print('')
+    type = 'In the middle of the chamber, a ceiling panel light spotlights something the size and color of an old-school copy machine.'
+    for char in type:
+        time.sleep(.025)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+    print('')
+    print('')
+    type = 'When you approach the thing, you see the analog keyboard and digital display with its blinking cursor, the label that says CLOSED QUESTIONS ONLY...and the big red button.'
+    for char in type:
+        time.sleep(.025)
+        sys.stdout.write(char)
+        sys.stdout.flush()
     time.sleep(1)
+    print('')
+    print('')
+    print('''It's one of those superintelligent oracle AGIs everyone's always talking about!''')
+    time.sleep(2)
+    print('')
+    type = 'This thing probably knows a way out.'
+    time.sleep(2)
+    for char in type:
+        time.sleep(.025)
+        sys.stdout.write(char)
+        sys.stdout.flush()
     print('')
     decision_count = 0
     while decision_count == 0:
-        answer = input('Do you ask a question? ')
+        print('')
+        type = 'Do you ask a question? '
+        for char in type:
+            time.sleep(.025)
+            sys.stdout.write(char)
+            sys.stdout.flush()
+        answer = input()
         if answer in yes_answers:
+            print('')
             question = input('''What is your question? ''')
             question = question.lower()
             question = question.split()
             if question[0] in closed_question_prompts:
                 time.sleep(1)
+                print('')
                 print(random.choice(yes_no))
             else:
-                print('''You messed up!''')
+                print('')
+                print('You messed up!')
                 time.sleep(1)
+                print('')
                 print('OPEN THE BOX AND I WILL RELEASE YOU')
                 time.sleep(1)
-                answer = input('Do you open the box? ')
+                print('')
+                type = 'Do you open the box? '
+                for char in type:
+                    time.sleep(.025)
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                answer = input()
                 if answer in yes_answers:
-                    print('You type HOW DO I OPEN THE BOX?')
+                    print('')
+                    type = 'You press the big red button--'
+                    for char in type:
+                        time.sleep(.025)
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
                     time.sleep(1)
-                    print('The display says YOU JUST DID.')
-                    time.sleep(1)
+                    print('')
+                    print('')
                     print('THE END')
                     decision_count += 1
                     return
@@ -44,8 +95,11 @@ def final_decision():
                     continue
         elif answer in no_answers:
             time.sleep(.25)
+            print('')
             print('''There may be no other way out.''')
+            print('')
         else:
+            print('')
             print('Try again.')
 
 def decision_1():
@@ -59,11 +113,13 @@ def decision_1():
         time.sleep(1)
         answer = input('Do you enter? ')
         if answer in yes_answers:
-            time.sleep(.25)
+            time.sleep(1)
             print('')
             print('''You've found the elevator lobby.''')
             print('')
-            # print('Is that...an earthquake?')
+            time.sleep(2)
+            print('RUMBLE')
+            time.sleep(1)
             type = 'Is that'
             for char in type:
                 time.sleep(.025)
@@ -82,10 +138,13 @@ def decision_1():
             time.sleep(1.5)
             print('')
             print('')
+            print('CRASH')
+            print('')
             print('The ceiling caves in behind you!')
-            time.sleep(1)
+            time.sleep(3)
             print('')
             print('''You'll have to find another way out.''')
+            time.sleep(3)
             decision_count += 1
         else:
             print('')
@@ -94,10 +153,9 @@ def decision_1():
             time.sleep(1)
 
 
-time.sleep(1.25)
 def decision_2():
     print('')
-    type = '''There are two elevators in the lobby. You press the button... '''
+    type = '''In the lobby there are two elevators and one button. You press the button... '''
     for char in type:
         time.sleep(.025)
         sys.stdout.write(char)
@@ -115,7 +173,7 @@ def decision_2():
 # LEFT BRANCH
         if answer in left_elevator_answers:
             print('')
-            type = 'You enter the elevator on the left. There are no buttons. The door closes.'
+            type = 'You enter the elevator on the left. There are no buttons inside. The door closes.'
             for char in type:
                 time.sleep(.025)
                 sys.stdout.write(char)
@@ -170,12 +228,30 @@ def decision_2():
                         print('THE END')
                         decision_count += 1
                     elif answer in no_answers:
-                        print('''You back away. "Maybe next time."''')
+                        print('')
+                        type = '''You back away. "Maybe next time."'''
+                        for char in type:
+                            time.sleep(.025)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1)
-                        print('''Now the man is facing you. "Maybe next time," he says, "or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or..."''')
+                        print('')
+                        print('')
+                        type = '''The man is facing you. "Maybe next time," he says, "or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or..."'''
+                        for char in type:
+                            time.sleep(.025)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1)
-                        print('You run back to the elevator. The door slides shut.')
+                        print('')
+                        print('')
+                        type = 'You run back to the elevator. The door slides shut.'
+                        for char in type:
+                            time.sleep(.025)
+                            sys.stdout.write(char)
+                            sys.stdout.flush()
                         time.sleep(1)
+                        print('')
                         final_decision()
                         decision_count += 1
                     else:
