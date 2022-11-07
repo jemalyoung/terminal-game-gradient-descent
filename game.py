@@ -194,7 +194,7 @@ def decision_2():
                 print('A man in a white lab coat working at a whiteboard. His dry-erase marker squeaks and squeals.')
                 time.sleep(1)
                 print('')
-                type = '''"Come in and I'll show you the way out," he says, still facing the algebraic blasphemies and grotesque decision matrices on the whiteboard. "Would you like me to show you?"'''
+                type = '''"Come in and I'll show you the way out," he says, and you notice the algebraic blasphemies and grotesque decision matrices on the whiteboard. "Would you like me to show you?"'''
                 for char in type:
                     time.sleep(.025)
                     sys.stdout.write(char)
@@ -256,7 +256,7 @@ def decision_2():
                         time.sleep(1)
                         print('')
                         print('')
-                        type = '''The man is facing you. "Maybe next time," he says, "or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or..."'''
+                        type = '''"Maybe next time," the man says, "or the time after that. Or the time after that. Or the time after that. Or the time after that. Or the time after that. Or..."'''
                         for char in type:
                             time.sleep(.025)
                             sys.stdout.write(char)
