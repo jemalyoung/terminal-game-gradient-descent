@@ -297,7 +297,7 @@ def decision_2():
                 time.sleep(1)
                 print('')
                 print('')
-                type = '''"Hello?"'''
+                type = '''Mysterious Voice: "Hello?"'''
                 for char in type:
                     time.sleep(.050)
                     sys.stdout.write(char)
@@ -383,7 +383,6 @@ def decision_2():
                         decision_count += 1
                         return
                     elif answer in no_answers:
-                        print('')
                         print('')
                         type = 'The stench makes you think twice. You stay put. The elevator closes.'
                         for char in type:
